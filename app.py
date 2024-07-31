@@ -16,6 +16,8 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 import os
 
+id = st.secrets["Key"]
+
 st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded")
