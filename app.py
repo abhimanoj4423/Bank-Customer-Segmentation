@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
-import joblib
+import pickle
 
 from streamlit_option_menu import option_menu
 from sklearn.impute import *
@@ -23,12 +23,12 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded")
 
-cl_model = joblib.load(open('rfclassifier.joblib', 'rb'))
-cu_model = joblib.load(open('kmeans.joblib', 'rb'))
-imp_median = joblib.load(open('imp_median.joblib', 'rb'))
-imp_mode = joblib.load(open('imp_mode.joblib', 'rb'))
-oe_edu = joblib.load(open('oe_edu.joblib', 'rb'))
-oe_job = joblib.load(open('oe_job.joblib', 'rb'))
+cl_model = pickle.load(open('rfclassifier.joblib', 'rb'))
+cu_model = pickle.load(open('kmeans.joblib', 'rb'))
+imp_median = pickle.load(open('imp_median.joblib', 'rb'))
+imp_mode = pickle.load(open('imp_mode.joblib', 'rb'))
+oe_edu = pickle.load(open('oe_edu.joblib', 'rb'))
+oe_job = pickle.load(open('oe_job.joblib', 'rb'))
 
 std =StandardScaler()
 
