@@ -16,7 +16,8 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 import os
 
-id = st.secrets["Key"]
+Key = st.secrets["Key"]
+Id = st.secrets["Id"]
 
 st.set_page_config(
     layout="wide",
